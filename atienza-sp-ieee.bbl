@@ -1,0 +1,58 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{Narboneta16}
+C.~NARBONETA and K.~TEKNOMO, ``A study of metro manila's public transportation sector: Implementing a multimodal public transportation route planner,'' \emph{Asian Transport Studies}, vol.~4, no.~2, pp. 460--477, 2016.
+
+\bibitem{Lagua19}
+\BIBentryALTinterwordspacing
+B.~LAGUA, ``A study of metro manila's public transportation sector: Implementing a multimodal public transportation route planner,'' 2019. [Online]. Available: \url{https://www.bworldonline.com/editors-picks/2019/04/26/227410/the-need-to-own-cars/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Mayo20}
+\BIBentryALTinterwordspacing
+F.~Mayo and E.~Taboada, ``Ranking factors affecting public transport mode choice of commuters in an urban city of a developing country using analytic hierarchy process: The case of metro cebu, philippines,'' \emph{Transportation Research Interdisciplinary Perspectives}, vol.~4, p. 100078, 2020. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S2590198219300776}
+\BIBentrySTDinterwordspacing
+
+\bibitem{RamizoJr19}
+\BIBentryALTinterwordspacing
+G.~Ramizo~Jr., ``Comparing conventional public transport to ride-hailing apps: A snapshot of user experiences from metro manila,'' in \emph{Proceedings of the 2nd International Conference on Strategic and Global Studies (ICSGS 2018)}.\hskip 1em plus 0.5em minus 0.4em\relax Atlantis Press, 2019/11, pp. 155--161. [Online]. Available: \url{https://doi.org/10.2991/icsgs-18.2019.21}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Gkiotsalitis15}
+K.~Gkiotsalitis and A.~Stathopoulos, ``A mobile application for real-time multimodal routing under a set of users’ preferences,'' \emph{Journal of Intelligent Transportation Systems}, vol.~19, no.~2, pp. 149--166, 2015.
+
+\bibitem{Noreikis14}
+M.~Noreikis, P.~Butkus, and J.~K. Nurminen, ``In-vehicle application for multimodal route planning and analysis,'' in \emph{2014 IEEE 3rd International Conference on Cloud Networking (CloudNet)}, 2014, pp. 350--355.
+
+\bibitem{Dimokas18}
+N.~Dimokas, K.~Kalogirou, P.~Spanidis, and D.~Kehagias, ``A mobile application for multimodal trip planning,'' in \emph{2018 9th International Conference on Information, Intelligence, Systems and Applications (IISA)}, 2018, pp. 1--8.
+
+\bibitem{Narboneta15}
+C.~Narboneta and K.~M. Teknomo, ``Implementation of multimodal public transportation route planner for metro manila,'' \emph{Journal in Urban and Regional Planning}, vol.~2, no.~1, pp. 9--17, 2015.
+
+\bibitem{Comandao21}
+\BIBentryALTinterwordspacing
+A.~Comandao, W.~Santos, L.~Velasco, J.~Romano, and R.~Macatangga, ``E-jeep nn: An android e-jeep guide app with gps and open trip planner api for the new normal,'' \emph{Innovatus}, vol.~4, pp. 1--5, 2021. [Online]. Available: \url{https://doi.org/10.5281/zenodo.4646682}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Lund01}
+A.~M. Lund, ``Measuring usability with the use questionnaire12,'' \emph{Usability interface}, vol.~8, no.~2, pp. 3--6, 2001.
+
+\end{thebibliography}

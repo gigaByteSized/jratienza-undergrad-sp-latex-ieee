@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: atienza-sp-ieee.aux
+The style file: ./IEEE/IEEEtran.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Database file #1: ./atienza-sp-ieee.bib
+-- IEEEtran.bst version 1.11 (2003/04/02) by Michael Shell.
+-- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 10 entries,
+            3975 wiz_defined-function locations,
+            871 strings with 9439 characters,
+and the built_in function-call counts, 7560 in all, are:
+= -- 634
+> -- 144
+< -- 64
++ -- 79
+- -- 23
+* -- 370
+:= -- 1204
+add.period$ -- 21
+call.type$ -- 10
+change.case$ -- 10
+chr.to.int$ -- 135
+cite$ -- 10
+duplicate$ -- 547
+empty$ -- 599
+format.name$ -- 30
+if$ -- 1726
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 91
+newline$ -- 58
+num.names$ -- 10
+pop$ -- 194
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 602
+stack$ -- 0
+substring$ -- 336
+swap$ -- 446
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 0
+warning$ -- 0
+while$ -- 39
+width$ -- 12
+write$ -- 129
