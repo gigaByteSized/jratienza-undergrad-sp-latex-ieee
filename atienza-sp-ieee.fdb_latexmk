@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex atienza-sp-ieee"] 1701075524 "atienza-sp-ieee.aux" "atienza-sp-ieee.bbl" "atienza-sp-ieee" 1701075524 0
+["bibtex atienza-sp-ieee"] 1701640254 "atienza-sp-ieee.aux" "atienza-sp-ieee.bbl" "atienza-sp-ieee" 1701759289 0
   "./IEEE/IEEEtran.bst" 1154590041 56877 4c81423924dc505d67d7e5fcc3311d54 ""
   "./atienza-sp-ieee.bib" 1700949913 32490 bd59b37cffa68db0b1a67154bd2fe0e3 ""
-  "atienza-sp-ieee.aux" 1701075524 3070 0464b3e93be82f17d194bdfbf63de218 "pdflatex"
+  "atienza-sp-ieee.aux" 1701759289 3184 e693fa2a67305e05363f78004ac930cd "pdflatex"
   (generated)
   "atienza-sp-ieee.bbl"
   "atienza-sp-ieee.blg"
   (rewritten before read)
-["pdflatex"] 1701075524 "atienza-sp-ieee.tex" "atienza-sp-ieee.pdf" "atienza-sp-ieee" 1701075524 0
+["pdflatex"] 1701759288 "atienza-sp-ieee.tex" "atienza-sp-ieee.pdf" "atienza-sp-ieee" 1701759289 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1689853683 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -56,9 +56,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1696793619 4623317 a14e403ea671a9bc12f23e543c6a500e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1696793605 8204224 db892ae2c888b3d9ed85e50cfe36d3bc ""
   "IEEE/IEEEtran.cls" 1152241864 196554 3cabd11adeac29567194b82095c92685 ""
-  "atienza-sp-ieee.aux" 1701075524 3070 0464b3e93be82f17d194bdfbf63de218 "pdflatex"
-  "atienza-sp-ieee.bbl" 1701075524 3721 d4465b510fc8ad51dacb7f80aa87439f "bibtex atienza-sp-ieee"
-  "atienza-sp-ieee.tex" 1700954934 21616 9bec5bea12869b11e2ad76eefcc106bf ""
+  "atienza-sp-ieee.aux" 1701759289 3184 e693fa2a67305e05363f78004ac930cd "pdflatex"
+  "atienza-sp-ieee.bbl" 1701640254 3721 d4465b510fc8ad51dacb7f80aa87439f "bibtex atienza-sp-ieee"
+  "atienza-sp-ieee.tex" 1701759287 23106 c3b38b3b094720ae6f72083794d526bd ""
   "yourPicture.eps" 1156488005 21238 3834dbb2a4b57ff7447ac5afa9dd78fa ""
   (generated)
   "atienza-sp-ieee.aux"
