@@ -144,8 +144,8 @@ A laptop with the following specifications was used to host the development envi
     \item $\textbf{Memory:}$ 31511MiB $\approx$ 32GB DDR4
 \end{itemize} \hfill \
 
-\subsubsection{\textbf{Client Machines}}
-While the aim of the study is to produce a mobile application for both Android and iOS hosts, only a physical Android device was used for testing and debugging of the application:
+\subsubsection{\textbf{Client Machine}}
+While the aim of the study is to produce a mobile application for both Android and iOS hosts, only a physical Android device was used for testing and debugging of the application. 
 \begin{description}
     \item[\textbf{Android Client:}] \hfill \\
         A Xiaomi Poco F3 with the following specifications was used:
@@ -166,10 +166,21 @@ While the aim of the study is to produce a mobile application for both Android a
     %%        \item $\textbf{Memory:}$ 3775MB $\approx$ 4GB
     %%        \item $\textbf{Display:}$ 1125px$\times$2436px @ 458ppi 
     %%        \end{itemize}
+
+
+
 \end{description}
 
 This is due to the limitation of Flutter in debugging using a physical iOS device without the presence of XCode in a Mac machine.
 
+\subsubsection{\textbf{Backend Server}}
+A Google Cloud Platform (GCP) compute engine with the following specifications was used to host the backend server of the management application and the OpenTripPlanner instance:
+\begin{itemize}
+    \item $\textbf{Machine Type:}$  e2-highmem-4
+    \item $\textbf{CPU Platform:}$ Intel Broadwell
+    \item $\textbf{Operating System Image:}$ ubuntu-2404-noble-amd64-v20240423 x86\_64
+    \item $\textbf{Memory:}$ 31511MiB $\approx$ 32GB
+\end{itemize} \hfill \
 \hfill
 
 \subsubsection{\textbf{Development Tools}}
@@ -200,15 +211,31 @@ The following tools were used in developing the application:
     %\item[\textbf{Expo Go:}] \hfill \\
     %    A mobile client for Expo that runs development builds.
 
+\item[\textbf{Firebase Firestore and Firebase Hosting:}] \hfill \\
+    A set of backend computing services that served as the database for storing data consumed by the client-application and hosting the management application and the backend services.
+
     \item[\textbf{General Transit Feed Specification (GTFS):}] \hfill \\
         An open standard for distributing information about transit systems that served as the schema of the transit system database.
     
-    \item[\textbf{Leaflet:}] \hfill \\
-        An open-source JavaScript library for mobile-friendly interactive maps which served as the interactive map of the application.
+    \item[\textbf{Leaflet and React Leaflet:}] \hfill \\
+        Open-source JavaScript libraries for interactive maps which served as the interactive map of the management application.
+
+    \item[\textbf{Flutter Map:}] \hfill \\
+        An open-source mapping package for Flutter which served as the interactive map of the client-facing application.
+
+    \item[\textbf{Photon by Komoot:}] \hfill \\
+        An open source geocoder built for OpenStreetMap data which served as the geocoder and provided feature search functionality for the client-facing application.
+
+    \item[\textbf{OpenTripPlanner (OTP):}] \hfill \\
+        An open-source multi-modal trip planner that was used to serve the GTFS data consumed by the client-facing application.
+
+    \newpage
 
     \item[\textbf{Open Route Service (ORS):}] \hfill \\
-        An open-source API that provides global spatial services by consuming geographic data from OpenStreetMap (OSM) which handled the routing logic of the application.
-    
+        An open-source API that provides global spatial services by consuming geographic data from OpenStreetMap (OSM) which augmented the trip creation process in the management application.
+
+    \item[\textbf{NGINX:}] \hfill \\
+        An open-source web server software that was used as a reverse proxy for deploying the OTP instance and backend server over the internet using HTTPS.
     %\item[\textbf{complexity-report:}] \hfill \\
     %    An npm package for software complexity analysis of JavaScript projects which benchmarked the complexity of the source code of the application.
 \end{description}
@@ -219,43 +246,51 @@ The application is composed of a client-facing application and a management appl
 \subsubsection{\textbf{Client-facing application}}
 
 \begin{description}
-    \item[\textbf{Register:}] \hfill \\
-        Clients are required to register in order to use extended functionalities[*] of the application.
+%    \item[\textbf{Register:}] \hfill \\
+%        Clients are required to register in order to use extended functionalities[*] of the application.
 
     \item[\textbf{Generate multiple routes:}] \hfill \\
-        Multiple routes will be generated from going from point A to point B with predefined user preferences (preferred CPT modes) being shown first.
+        Multiple routes are generated given an origin and destination. Appropriate fare pricing based on LTFRB's specification, along with per-leg and overall trip duration, will also be displayed.
 
     \item[\textbf{Generate public alerts*:}] \hfill \\
-        Registered clients can generate public alerts (using markers or cirlces) such as vehicular accidents to alert commuters. These alerts are moderated in an upvote/downvote system and can be taken down by administrators.
+        Clients generated public alerts, such as vehicular accidents, to alert commuters. Users were also able to set an expiry date (maximum of 30 days) which set the Time To Live (TTL) of the alert in the database for automatic cleanup.
 
-    \item[\textbf{Add Routes*:}] \hfill \\
-        Registered clients can add routes or request changes in a particular route. A prompt asking for GTFS-ready information will be used.
+   % \item[\textbf{Add Routes*:}] \hfill \\
+   %     Registered clients can add routes or request changes in a particular route. A prompt asking for GTFS-ready information will be used.
 \end{description}
 
 \subsubsection{\textbf{Management application}}
 
 \begin{description}
-    \item[\textbf{Login:}] \hfill \\
-        Administrators are required to login using a provided account.
+%    \item[\textbf{Login:}] \hfill \\
+%        Administrators are required to login using a provided account.
+    \item[\textbf{System metrics:}] \hfill \\
+        Administrators were able check if the OTP instance served in the GCP compute engine was running or not through OTP's Actuator API. They were also able to observe the GTFS database metrics in the dashboard.
 
-    \item[\textbf{View routes:}] \hfill \\
-        Administrators can visualize the GTFS data being used by the application.
+    \item[\textbf{View trips:}] \hfill \\
+        Administrators were able to visualize the GTFS data being used by the application.
 
     \item[\textbf{Interactive GTFS database editor:}] \hfill \\
-        Administrators can Create, Read, Update, and Delete (CRUD) data to and from the GTFS database that is being consumed by the client-facing application.
+        Administrators were able to Create, Read, Update, and Delete (CRUD) data to and from the GTFS database that was being consumed by the client-facing application.
 
-    \item[\textbf{Approve/Reject requests:}] \hfill \\
-       Administrators can approve or reject requests made by clients.
+
+    \item[\textbf{Export GTFS:}] \hfill \\
+        Administrators were able to export the GTFS data stored in the database into a zip file that conformed to the GTFS standard. 
+
+
+    \item[\textbf{View and delete requests:}] \hfill \\
+       Administrators were able to view and delete requests made by clients. These requests can be a basis for the creation of new routes or modification of routes in the database.
     
     \item[\textbf{Moderate alerts:}] \hfill \\
-       Administrators can create, modify, and take down public alerts.
+       Administrators were able to create, modify, and take down community alerts.
 \end{description}
 
 \subsection{User Evaluation}
-For the usability and user experience aspect, the application is tested by students residing in Batangas Province, transport operators, and transport enthusiasts willing to take part in the study. For evaluators using an Android device, the APK of the application will be provided.
+For the usability and user experience aspect, the client-facing application was tested by students residing in Batangas Province, transport operators, and transport enthusiasts willing to take part in the study. For evaluators using an Android device, the APK of the application were provided.
+The management application was tested by a representative from LTO Calapan.
 %For iPhone users, Expo Go will be used to communicate with the Expo server that will be ran by the proponent.
 
-The usability and user experience aspect will be measured using the Usefulness, Satisfaction, and Ease of Use (USE) Questionnaire~\cite{Lund01}, a 7-point likert scale, which will be modified to accommodate objective 3. 
+The usability and user experience aspect were measured using the Usefulness, Satisfaction, and Ease of Use (USE) Questionnaire~\cite{Lund01}, a 7-point likert scale. 
 
 %For the maintainability aspect as denoted in objective 6, the application is tested by senior BS Computer Science students, the UPLB ICS Faculty, and other IT experts. The GitHub repository used in the development process of the application will be provided for them. A software complexity report generated by the npm package `complexity-report' will also be provided.
 
@@ -265,15 +300,99 @@ The usability and user experience aspect will be measured using the Usefulness, 
 
 % RESULTS AND DISCUSSION
 \section{Results and Discussion}
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over
-the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown
-fox jumps over the lazy dog.
+A total of 21 individuals participated in the client-facing app evaluation while there was only a single certified tester for the management application. The interpretation for the 7-point Likert scale is the following:
 
+\begin{description}
+    \item 1 - Strongly disagree
+    \item 2 - Disagree
+    \item 3 - Somewhat disagree
+    \item 4 - Neutral
+    \item 5 - Somewhat agree
+    \item 6 - Agree
+    \item 7 -- Strongly agree.
+\end{description}
+
+\subsection{Management application}
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.18]{./figures/manager means.png}
+    \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Manager}
+\end{figure}
+\subsubsection{Usefulness}
+Figure 1 shows the scores for each of the questions on the usefulness scale.
+”It helps me be more effective” got 6.00, ”It helps me be more productive” got 6.00, ”It is useful” got 7.00, ”It gives me more control over the activities in my life” got 6.00, ”It makes the things I want to accomplish easier to get done” got 6.00, ”It saves me time when I use it” got 6.00, ”It meets my needs” got 6.00, ”It does everything I would expect it to do” got 6.00.
+All the questions under usefulness got a score between 6 (agree) and 7 (strongly agree) with 6 being more dominant.
+\subsubsection{Ease of Use}
+Figure 1 shows the scores for each of the questions on the ease of use scale. ”It is easy to use” got 5.00, ”It is simple to use” got 5.00, ”It is user friendly” got 6.00, ”It is flexible” got 7.00, ”It requires the fewest steps possible to accomplish what I want to do with it” got 4.00, ”Using it is effortless” got 4.00, ”I can use it without written instructions” got 3.00, ”I don’t notice any inconsistencies as I use it” got 5.00, ”Both occasional and regular users would like it” got 2.00, ”I can recover from mistakes quickly and easily” got 4.00, ”I can use it successfully every time” got 4.00.
+The questions under ease of use got scores between 3 (disagree) and 7 (strongly agree).
+\subsubsection{Ease of Learning}
+Figure 1 shows the scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 3.00, ”I easily remember how to use it” got 4.00, ”It is easy to learn to use it” got 3.00, ”I quickly became skillful with it” got 3.00.
+All of the questions under ease of learning got a score between 3 (somewhat disagree) and 4 (neutral).
+\subsubsection{Satisfaction}
+Figure 1 shows the scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 5.00, ”I would recommend it to a friend” got 6.00, ”It is fun to use” got 2.00, ”It works the way I want it to work” got 4.00, ”It is wonderful” got 4.00, ”I feel I need to have it” got 6.00, ”It is pleasant to use” got 4.00.
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.18]{./figures/manager means total.png}
+    \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Manager}
+\end{figure}
+All of the questions under usefulness got a score between 6 (agree) and 7 (strongly agree).
+\subsubsection{Interpretation}
+Figure 2 shows the scores for all scales of the USE Questionnaire.
+Usefulness got 6.12, Ease of Use got 4.00, Ease of Learning got 3.25, Satisfaction got 4.29.
+The Usefulness scale got a score between 6 (agree) and 7 (strongly agree), meaning the participant overall agree to the usefulness of management application.
+The Ease of Use scale got a score of 4 (neutral), indicating that the participant are neutral in agreeing or disagreeing with the ease of use of the management application.
+The Ease of Learning scale got a score between 3 (somewhat disagree) and 4 (neutral), suggesting that the participant somewhat disagrees or is not sure about the ease of learning  of the management application.
+The Satisfaction scale got scores between 4 (neutral) and 5 (somewhat agree), indicating that the participant are neutral to somewhat agreeing with the ease of use and satisfaction of the management application.
+\subsubsection{Key Qualitative Assessment Points}
+\begin{description}
+    \item 1) The management app provides a better experience than manual data entry from Excel sheets.
+    \item 2) It helps visualize the work slightly better compared to traditional methods.
+    \item 3) However, the app has a steep learning curve.
+\end{description}
+
+\subsection{Client-facing application}
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.18]{./figures/client means.png}
+    \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Client}
+\end{figure}
+
+
+\subsubsection{Usefulness}
+Figure 3 shows the mean scores for each of the questions on the usefulness scale.
+”It helps me be more effective” got 6.24, ”It helps me be more productive” got 6.29, ”It is useful” got 6.67, ”It gives me more control over the activities in my life” got 6.10, ”It makes the things I want to accomplish easier to get done” got 6.05, ”It saves me time when I use it” got 6.00, ”It meets my needs” got 6.29, ”It does everything I would expect it to do” got 6.24.
+All the questions under usefulness got a mean score between 6 (agree) and 7 (strongly agree).
+\subsubsection{Ease of Use}
+Figure 3 shows the mean scores for each of the questions on the ease of use scale. ”It is easy to use” got 6.52, ”It is simple to use” got 6.57, ”It is user friendly” got 6.57, ”It is flexible” got 6.14, ”It requires the fewest steps possible to accomplish what I want to do with it” got 6.19, ”Using it is effortless” got 6.24, ”I can use it without written instructions” got 6.10, ”I don’t notice any inconsistencies as I use it” got 5.90, ”Both occasional and regular users would like it” got 6.24, ”I can recover from mistakes quickly and easily” got 6.24, ”I can use it successfully every time” got 6.29.
+All the questions under ease of use got a mean score between 6 (agree) and 7 (strongly agree) except for the question "I don't notice any inconsistencies as I use it" which got 5.90 but is still within the agree range.
+\subsubsection{Ease of Learning}
+Figure 3 shows the mean scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 6.33, ”I easily remember how to use it” got 6.52, ”It is easy to learn to use it” got 6.38, ”I quickly became skillful with it” got 6.38.
+All of the questions under ease of learning got a mean score between 6 (agree) and 7 (strongly agree).
+\subsubsection{Satisfaction}
+Figure 3 shows the mean scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 6.29, ”I would recommend it to a friend” got 6.52, ”It is fun to use” got 6.28, ”It works the way I want it to work” got 6.19, ”It is wonderful” got 6.29, ”I feel I need to have it” got 6.29, ”It is pleasant to use” got 6.24.
+All of the questions under usefulness got a mean score between 6 (agree) and 7 (strongly agree).
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.18]{./figures/client means total.png}
+    \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Client}
+\end{figure}
+\subsubsection{Interpretation}
+Figure 4 below shows the mean scores for all scales of the USE Questionnaire. Usefulness got 6.23, Ease of Use got 6.27, Ease of Learning got 6.40, Satisfaction got 6.30.
+All of the scales got a mean score between 6 (agree) and 7 (strongly agree), meaning respondents overall agree-strongly agree to the usefulness, ease of use, ease of learning, and satisfaction of PARA!.
+\subsubsection{Key Qualitative Assessment Points}
+\begin{description}
+    \item 1) Users found the app useful for commuters, with potential to help traffic enforcers and other commuters.
+    \item 2) Suggestions for improvement included using brighter colors for route lines, adjusting font sizes, specifying areas where the app can be used, including public transport options, and allowing users to save previous itineraries.
+    \item 3) Some UI elements like the upper and lower parts of the landing page were seen as too invasive on the map view when starting a destination.
+    \item 4) The app was seen to have potential to assist both locals and tourists if expanded to cover the whole country.
+\end{description}
 % CONCLUSION AND FUTURE WORK
 \section{Conclusion and Future Work}
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over
-the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown
-fox jumps over the lazy dog.
+PARA! was successful in addressing the objectives and alleviating the challenges faced by commuters in the Philippines. The client-facing application, with its high scores across various metrics, indicates strong potential for real-world application. However, improvements are needed in the management application, particularly in terms of ease of use and ease of learning.
+
+Future work should focus on refining the management application interface to make it more intuitive and user-friendly. Additional testing on a broader demographic could also provide more insights into user experience improvements. Furthermore, expanding the scope of the application to support more regions and transportation modes could increase its utility and impact.
+
+Additionally, the expansion of this system calls for contributions to OpenTripPlanner and other mapping technologies that have OpenStreetMap at its core. PARA! will be released as an open source project to inspire budding developers and serve as basis for mapping and transit applications in the context of the Philippines.
 
 % APPENDICES
 \appendices

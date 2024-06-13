@@ -1,12 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.9)  5 DEC 2023 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.2)  13 JUN 2024 12:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **atienza-sp-ieee.tex
 (./atienza-sp-ieee.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (./IEEE/IEEEtran.cls
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+(./IEEE/IEEEtran.cls
 
 LaTeX Warning: You have requested document class `./IEEE/IEEEtran',
                but the document class provides `IEEEtran'.
@@ -16,11 +17,11 @@ Document Class: IEEEtran 2002/11/18 revision V1.6b by Michael Shell
 -- The source comments contain changelog notes.
 \@IEEEtrantmpdimenA=\dimen140
 \@IEEEtrantmpdimenB=\dimen141
-\@IEEEtrantmpcountA=\count185
-\@IEEEtrantmpcountB=\count186
-\@IEEEtrantmptoksA=\toks16
+\@IEEEtrantmpcountA=\count188
+\@IEEEtrantmpcountB=\count189
+\@IEEEtrantmptoksA=\toks17
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 776.
-(/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/opt/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \@IEEEnormalsizefontbaselineskip=\skip48
@@ -77,45 +78,45 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEiednormlabelsep=\dimen148
 \IEEEiedmathlabelsep=\dimen149
 \IEEEiedtopsep=\skip51
-\c@section=\count187
-\c@subsection=\count188
-\c@subsubsection=\count189
-\c@paragraph=\count190
-\c@IEEEsubequation=\count191
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@IEEEsubequation=\count194
 \abovecaptionskip=\skip52
 \belowcaptionskip=\skip53
-\c@figure=\count192
-\c@table=\count193
-\@IEEEeqnnumcols=\count194
-\@IEEEeqncolcnt=\count195
+\c@figure=\count195
+\c@table=\count196
+\@IEEEeqnnumcols=\count197
+\@IEEEeqncolcnt=\count198
 \@IEEEtmpitemindent=\dimen150
-\c@biography=\count196
+\c@biography=\count199
 \@IEEEtranrubishbin=\box51
-) (/usr/share/texmf-dist/tex/latex/cite/cite.sty
+) (/opt/texlive/2024/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/opt/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+ (/opt/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+\KV@toks@=\toks18
+) (/opt/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+ (/opt/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/opt/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/opt/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen151
 \Gin@req@width=\dimen152
-) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count197
+) (/opt/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count266
 \l__pdf_internal_box=\box52
 ) (./atienza-sp-ieee.aux)
 \openout1 = `atienza-sp-ieee.aux'.
@@ -134,23 +135,23 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/opt/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
+\scratchcounter=\count267
 \scratchdimen=\dimen153
 \scratchbox=\box53
-\nofMPsegments=\count199
-\nofMParguments=\count266
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count267
+\nofMPsegments=\count268
+\nofMParguments=\count269
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count270
 \MPscratchDim=\dimen154
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks19
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\MPnumerator=\count271
+\makeMPintoPDFobject=\count272
+\everyMPtoPDFconversion=\toks20
+) (/opt/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (/opt/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -165,81 +166,123 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--68
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 74.
-(/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+(/opt/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) [1{/opt/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ] [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 141.
 
-Underfull \hbox (badness 1838) in paragraph at lines 191--193
+Underfull \hbox (badness 6825) in paragraph at lines 181--182
+[]$[]$ \OT1/ptm/m/n/10 ubuntu-2404-noble-amd64-
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 202--204
 \OT1/ptm/m/n/10 An open-source UI de-vel-op-ment kit for cross-
  []
 
-
-Underfull \hbox (badness 3503) in paragraph at lines 206--208
-\OT1/ptm/m/n/10 An open-source JavaScript li-brary for mobile-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-[3] (./atienza-sp-ieee.bbl)
+<./figures/manager means.png, id=18, 1378.1889pt x 709.6914pt>
+File: ./figures/manager means.png Graphic file (type png)
+<use ./figures/manager means.png>
+Package pdftex.def Info: ./figures/manager means.png  used on input line 318.
+(pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
+[4 <./figures/manager means.png>]
+<./figures/manager means total.png, id=24, 1378.1889pt x 709.6914pt>
+File: ./figures/manager means total.png Graphic file (type png)
+<use ./figures/manager means total.png>
+Package pdftex.def Info: ./figures/manager means total.png  used on input line 335.
+(pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
+<./figures/client means.png, id=25, 1378.1889pt x 709.6914pt>
+File: ./figures/client means.png Graphic file (type png)
+<use ./figures/client means.png>
+Package pdftex.def Info: ./figures/client means.png  used on input line 356.
+(pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 2119) has occurred while \output is active []
+
+<./figures/client means total.png, id=26, 1378.1889pt x 709.6914pt>
+File: ./figures/client means total.png Graphic file (type png)
+<use ./figures/client means total.png>
+Package pdftex.def Info: ./figures/client means total.png  used on input line 376.
+(pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./figures/manager means total.png> <./figures/client means.png>]
+Underfull \hbox (badness 1571) in paragraph at lines 385--386
+[]\OT1/ptm/m/n/10 2) Sug-ges-tions for im-prove-ment in-cluded us-ing
+ []
+
+(./atienza-sp-ieee.bbl)
 Package epstopdf Info: Source file: <./yourPicture.eps>
-(epstopdf)                    date: 2006-08-25 14:40:05
+(epstopdf)                    date: 2024-05-15 18:27:06
 (epstopdf)                    size: 21238 bytes
 (epstopdf)             Output file: <./yourPicture-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-10-09 03:36:29
+(epstopdf)                    date: 2024-05-15 18:27:06
 (epstopdf)                    size: 6293 bytes
 (epstopdf)             Command: <repstopdf --outfile=./yourPicture-eps-converted-to.pdf ./yourPicture.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
-<./yourPicture-eps-converted-to.pdf, id=18, 73.27374pt x 91.34125pt>
+<./yourPicture-eps-converted-to.pdf, id=32, 73.27374pt x 91.34125pt>
 File: ./yourPicture-eps-converted-to.pdf Graphic file (type pdf)
 <use ./yourPicture-eps-converted-to.pdf>
-Package pdftex.def Info: ./yourPicture-eps-converted-to.pdf  used on input line 297.
+Package pdftex.def Info: ./yourPicture-eps-converted-to.pdf  used on input line 416.
 (pdftex.def)             Requested size: 73.27354pt x 91.34102pt.
 
-Overfull \hbox (1.00356pt too wide) in paragraph at lines 297--297
+Overfull \hbox (1.00356pt too wide) in paragraph at lines 416--416
  [][] 
  []
 
 Package epstopdf Info: Source file: <./yourPicture.eps>
-(epstopdf)                    date: 2006-08-25 14:40:05
+(epstopdf)                    date: 2024-05-15 18:27:06
 (epstopdf)                    size: 21238 bytes
 (epstopdf)             Output file: <./yourPicture-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-10-09 03:36:29
+(epstopdf)                    date: 2024-05-15 18:27:06
 (epstopdf)                    size: 6293 bytes
 (epstopdf)             Command: <repstopdf --outfile=./yourPicture-eps-converted-to.pdf ./yourPicture.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
 File: ./yourPicture-eps-converted-to.pdf Graphic file (type pdf)
 <use ./yourPicture-eps-converted-to.pdf>
-Package pdftex.def Info: ./yourPicture-eps-converted-to.pdf  used on input line 297.
+Package pdftex.def Info: ./yourPicture-eps-converted-to.pdf  used on input line 416.
 (pdftex.def)             Requested size: 73.27354pt x 91.34102pt.
 
-Overfull \hbox (1.00356pt too wide) in paragraph at lines 297--297
+Overfull \hbox (1.00356pt too wide) in paragraph at lines 416--416
  [][] 
  []
 
-[4 <./yourPicture-eps-converted-to.pdf>] (./atienza-sp-ieee.aux) ) 
+[6 <./figures/client means total.png> <./yourPicture-eps-converted-to.pdf>] (./atienza-sp-ieee.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 2038 strings out of 476025
- 34702 string characters out of 5796532
- 1869388 words of memory out of 5000000
- 22502 multiletter control sequences out of 15000+600000
- 549822 words of font info for 93 fonts, out of 8000000 for 9000
+ 2072 strings out of 474104
+ 35992 string characters out of 5720336
+ 1944493 words of memory out of 5000000
+ 24457 multiletter control sequences out of 15000+600000
+ 595604 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,62p,553b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on atienza-sp-ieee.pdf (4 pages, 104339 bytes).
+ 57i,10n,65p,699b,302s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on atienza-sp-ieee.pdf (6 pages, 305624 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
