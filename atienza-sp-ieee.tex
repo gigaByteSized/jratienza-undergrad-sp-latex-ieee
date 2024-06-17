@@ -28,7 +28,7 @@
 
 % ABSTRACT
 \begin{abstract}
-Public transportation is a leading mode of transportation in the Philippines, but the public transportation system has often been criticized for lagging behind the standards of developed countries.
+Public transportation is a leading mode of transportation in the Philippines, yet the public transportation system has often been criticized for lagging behind the standards of developed countries.
 There is a lack of travel applications specifically tailored for public transportation assistance, and the current choices are limited and have limitations.
 The goal of this paper is to develop the basis of a `commuter first' multimodal trip planning travel companion for mobile devices that commuters can use on demand and anywhere.
 This is especially important for first-time commuters to an area.
@@ -95,12 +95,12 @@ The client-facing application aims to provide necessary information to commuters
 It also aims to make a requesting module that can aid administrators in the GTFS standardization process.
 
 \subsection{Scope and Limitations}
-Since this study is a wide field, this paper will only focus on consuming GTFS data for the Batangas province. Realtime data---such as vehicle position tracking (based on the GTFS Realtime spec)---also cannot be provided since this relies on the accuracy of the static GTFS data, which is an uncontrollable factor in this paper's context.
+Since this study is a wide field, this paper will only focus on consuming General Transit Feed (GTFS) data for the Batangas province. Realtime data---such as vehicle position tracking (based on the GTFS Realtime spec)---also cannot be provided since this relies on the accuracy of the static GTFS data, which is an uncontrollable factor in this paper's context.
 
 Physical testing will also be limited to an Android device because of flutter's lack of a development tool---such as Expo/Expo Go for React Native---to run iOS applications virtually and physically without XCode, which needs a Mac machine.
 
-The modes of transportation to be supported in the application will be initialy limited to \textit{jeepneys}, buses, and vans.  
-Since \textit{`tricycles'}, are regulated by LGUs with formal and informal transport terminals, limited testing for the feasibility of its support will also be tested.
+The modes of transportation to be supported in the application will be initially limited to \textit{jeepneys}, modern \textit{jeepneys}, and buses.  
+% Since \textit{`tricycles'}, are regulated by LGUs with formal and informal transport terminals, limited testing for the feasibility of its support will also be tested.
 
 \subsection{Significance of the Study}
 Prefering mass public transport in general is the best choice in going from one point to another. % [ Insert Sakay.ph about page citation ].
@@ -117,7 +117,7 @@ project to harbor the needs of the whole country for a publicly available transp
 A number of works related to this study has been implemented in various transportation networks. Almost every implementation has been catered to the benefit of private transportation modes or formal CPTs such as rail systems and buses.
 Although each implementation is unique in terms of what framework and methodology they use, their end goal is the same---which is to provide commuters and travelers [on private vehicles] valuable information regarding the trips that they are about to make.
 
-Gkiotsalitis and Stathopoulosi~\cite{Gkiotsalitis15} wrote `A Mobile Application for Real-Time Multimodal Routing Under a Set of Users’ Preferences' which introduced a mobile navigation application designed for users without private vehicles or those preferring a combination of private and public transport to minimize travel time, offering intermodal routes tailored to individual preferences within complex urban networks, supported by a real-time database and two algorithms for optimal path determination.
+Gkiotsalitis and Stathopoulos~\cite{Gkiotsalitis15} wrote `A Mobile Application for Real-Time Multimodal Routing Under a Set of Users’ Preferences' which introduced a mobile navigation application designed for users without private vehicles or those preferring a combination of private and public transport to minimize travel time, offering intermodal routes tailored to individual preferences within complex urban networks, supported by a real-time database and two algorithms for optimal path determination.
 A study made by Noreikis and his team~\cite{Noreikis14} created an optimal in-vehicle park-and-ride solution for seamless private-public transport mode transfer which used multimodal trip planning technologies.
 Dimokas and his colleagues~\cite{Dimokas18} introduced the combination of already widely available carpooling solutions and public transport modes in their application.
 
@@ -312,7 +312,7 @@ Figure 4 shows the screen where managers would plot a trip's stops and its shape
     \caption{PARA! Manager trip wizard (stop times fine tuner)}
 \end{figure}
 
-Figure 5 shows the screen where managers would either manually or automatically edit the durations in each segment of the trip. 
+Figure 5 shows the screen where managers would either fine tune the durations of each trip segment. 
 
 \begin{figure}[!h]
     \centering
@@ -320,7 +320,7 @@ Figure 5 shows the screen where managers would either manually or automatically 
     \caption{PARA! Manager trip wizard (review and save route)}
 \end{figure}
 
-Figure 6 shows the screen where managers would review the trip details and its shape before adding it into the database. \hfill \\
+Figure 6 shows the screen where managers would review the trip before adding the it into the database. \hfill \\
 
     \item[\textbf{View and delete requests:}] \hfill \\
        Administrators were able to view and delete requests made by clients. These requests can be a basis for the creation of new routes or modification of routes in the database.
@@ -343,6 +343,8 @@ Figure 7 below shows the screen where managers could view and delete user-submit
     \caption{PARA! Manager trip wizard (review and save route)}
 \end{figure}
 
+\newpage
+
 \subsubsection{\textbf{Client-facing application}}
 
 \begin{description}
@@ -352,7 +354,7 @@ Figure 7 below shows the screen where managers could view and delete user-submit
     \item[\textbf{Generate multiple routes:}] \hfill \\
         Multiple routes are generated given an origin and destination. Appropriate fare pricing based on LTFRB's specification, along with per-leg and overall trip duration, will also be displayed.
 Figure 9 on the next page shows the screen where multiple routes are generated given an input of an origin and destination.
-The overall duration and fare is displayed on the top-left section of the DraggableScrollableSheet Widget while the duration and fare for each leg are displayed on the rightmost part of each itinerary leg entry (see Appendices I-IV for the fare computation formulae and sample fare matrices (as of October 8, 2023) provided by LTFRB RO-4A).
+The overall duration and fare is displayed on the top-left section of the DraggableScrollableSheet Widget while the duration and fare for each leg are displayed on the rightmost part of each itinerary leg entry (see Appendices I-IV for the fare computation formulae and sample fare matrices; as of October 8, 2023, provided by LTFRB RO-4A).
 Each route is color-coded through a custom random color generator function. In the figure, there are only two colors, teal and dandelion, which could be subtly seen due to the overlap in the route.
 The figure also shows a red "warning" icon which when tapped, shows details of a user- or manager-generated community alert.
 
@@ -492,9 +494,9 @@ All of the scales got a mean score between 6 (agree) and 7 (strongly agree), mea
 \end{description}
 % CONCLUSION AND FUTURE WORK
 \section{Conclusion and Future Work}
-PARA! was successful in addressing the objectives and alleviating the challenges faced by commuters in the Philippines. The client-facing application, with its high scores across various metrics, indicates strong potential for real-world application. However, improvements are needed in the management application, particularly in terms of ease of use and ease of learning.
+PARA! successfully addressed the objectives and alleviating the challenges faced by commuters in the Philippines. The client-facing application, with its high scores across various metrics, indicates strong potential for real-world application. However, improvements are needed in the management application, particularly in terms of ease of use and ease of learning.
 
-Future work should focus on refining the management application interface to make it more intuitive and user-friendly. Additional testing on a broader demographic could also provide more insights into user experience improvements. Furthermore, expanding the scope of the application to support more regions and transportation modes could increase its utility and impact.
+Future work should be focused on refining the management application interface to make it more intuitive and user-friendly. Additional testing on a broader demographic could also provide more insights into user experience improvements. Furthermore, expanding the scope of the application to support more regions and transportation modes could increase its utility and impact.
 
 Additionally, the expansion of this system calls for contributions to OpenTripPlanner and other mapping technologies that have OpenStreetMap at its core. PARA! will be released as an open source project to inspire budding developers and serve as basis for mapping and transit applications in the context of the Philippines.
 
@@ -541,7 +543,7 @@ Additionally, the expansion of this system calls for contributions to OpenTripPl
 I would like to express my gratitude to my Special Problem adviser, Prof. Concepcion Khan, for her guidance. \hfill \\
 Many thanks also to the open source communities of OpenStreetMap, Leaflet, OpenTripplanner, and Flutter Map, who answered my queries when no documentation could. \hfill \\
 My utmost gratitude to my family who have been by my side from the beginning, providing me with the encouragement and support I needed to persevere. \hfill \\
-To Angkol Junnie, one of the first comsci people who helped me have a smooth transition since my transfer from CAFS to CAS, I am thankful for everything that I learned from you. \hfill \\
+To Angkol Junnie, one of the first comsci people who helped me have a smooth transition since my transfer from BS Agriculture to BS Computer Science, I am thankful for everything that I learned from you. \hfill \\
 To my loving girlfriend, Aliyah, you have my deepest love and appreciation for bringing out the best in me and inspiring me to develop this system. Without you, I could not have seen the things that mattered and because of you, I was able to really push myself to the limits more than I could have ever imagined.
 % BIBLIOGRAPHY
 \bibliographystyle{./IEEE/IEEEtran}
@@ -551,7 +553,7 @@ To my loving girlfriend, Aliyah, you have my deepest love and appreciation for b
 % BIOGRAPHY
 \begin{biography}[{\includegraphics[scale=0.018]{./figures/sablay pic.jpg}}]{Jonas R. Atienza}
     is a Computer Science student from the University of the Philippines Los Baños. He is from Batangas City, Batangas. His research interests are cybersecurity, operating systems, geographic information systems (GIS), computer networks, and artificial intelligence (AI).
-He highly believes in the power of Free Open Source Software (FOSS) and is very interested in contributing and developing technologies for the benefit of the people.
+He highly believes in the power of Free Open Source Software (FOSS) and has his heart in contributing and developing technologies for the benefit of the people.
 \end{biography}
 
 

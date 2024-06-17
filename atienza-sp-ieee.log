@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.2)  17 JUN 2024 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.2)  17 JUN 2024 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -194,6 +194,9 @@ File: ./figures/manager/dashboard.jpeg Graphic file (type jpg)
 <use ./figures/manager/dashboard.jpeg>
 Package pdftex.def Info: ./figures/manager/dashboard.jpeg  used on input line 277.
 (pdftex.def)             Requested size: 221.5226pt x 124.44052pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <./figures/manager/view trip.jpeg, id=19, 1926.19624pt x 1083.04625pt>
 File: ./figures/manager/view trip.jpeg Graphic file (type jpg)
 <use ./figures/manager/view trip.jpeg>
@@ -209,47 +212,63 @@ File: ./figures/manager/trip wizard 2.jpeg Graphic file (type jpg)
 <use ./figures/manager/trip wizard 2.jpeg>
 Package pdftex.def Info: ./figures/manager/trip wizard 2.jpeg  used on input line 303.
 (pdftex.def)             Requested size: 221.5226pt x 124.55595pt.
-[4 <./figures/manager/dashboard.jpeg> <./figures/manager/view trip.jpeg> <./figures/manager/trip wizard 1.jpeg>]
-<./figures/manager/trip wizard 3.jpeg, id=25, 1926.19624pt x 1083.04625pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/manager/trip wizard 3.jpeg, id=22, 1926.19624pt x 1083.04625pt>
 File: ./figures/manager/trip wizard 3.jpeg Graphic file (type jpg)
 <use ./figures/manager/trip wizard 3.jpeg>
 Package pdftex.def Info: ./figures/manager/trip wizard 3.jpeg  used on input line 311.
 (pdftex.def)             Requested size: 221.5226pt x 124.55595pt.
-<./figures/manager/trip wizard 4.jpeg, id=26, 1926.19624pt x 1083.04625pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/manager/trip wizard 4.jpeg, id=23, 1926.19624pt x 1083.04625pt>
 File: ./figures/manager/trip wizard 4.jpeg Graphic file (type jpg)
 <use ./figures/manager/trip wizard 4.jpeg>
 Package pdftex.def Info: ./figures/manager/trip wizard 4.jpeg  used on input line 319.
 (pdftex.def)             Requested size: 221.5226pt x 124.55595pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
+[4 <./figures/manager/dashboard.jpeg> <./figures/manager/view trip.jpeg> <./figures/manager/trip wizard 1.jpeg>]
 <./figures/manager/route request.jpeg, id=27, 1925.1925pt x 1083.04625pt>
 File: ./figures/manager/route request.jpeg Graphic file (type jpg)
 <use ./figures/manager/route request.jpeg>
 Package pdftex.def Info: ./figures/manager/route request.jpeg  used on input line 331.
 (pdftex.def)             Requested size: 221.40717pt x 124.55595pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <./figures/manager/alerts.jpeg, id=28, 1926.19624pt x 1083.04625pt>
 File: ./figures/manager/alerts.jpeg Graphic file (type jpg)
 <use ./figures/manager/alerts.jpeg>
 Package pdftex.def Info: ./figures/manager/alerts.jpeg  used on input line 342.
 (pdftex.def)             Requested size: 221.5226pt x 124.55595pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [5 <./figures/manager/trip wizard 2.jpeg> <./figures/manager/trip wizard 3.jpeg> <./figures/manager/trip wizard 4.jpeg> <./figures/manager/route request.jpeg> <./figures/manager/alerts.jpeg>]
 <./figures/client/multiple route.png, id=32, 1084.05pt x 2409.0pt>
 File: ./figures/client/multiple route.png Graphic file (type png)
 <use ./figures/client/multiple route.png>
-Package pdftex.def Info: ./figures/client/multiple route.png  used on input line 363.
+Package pdftex.def Info: ./figures/client/multiple route.png  used on input line 365.
 (pdftex.def)             Requested size: 108.41135pt x 240.91411pt.
 <./figures/client/add alert.png, id=33, 1084.05pt x 2409.0pt>
 File: ./figures/client/add alert.png Graphic file (type png)
 <use ./figures/client/add alert.png>
-Package pdftex.def Info: ./figures/client/add alert.png  used on input line 373.
+Package pdftex.def Info: ./figures/client/add alert.png  used on input line 375.
 (pdftex.def)             Requested size: 108.41135pt x 240.91411pt.
 <./figures/client/welcome.png, id=34, 1084.05pt x 2409.0pt>
 File: ./figures/client/welcome.png Graphic file (type png)
 <use ./figures/client/welcome.png>
-Package pdftex.def Info: ./figures/client/welcome.png  used on input line 379.
+Package pdftex.def Info: ./figures/client/welcome.png  used on input line 381.
 (pdftex.def)             Requested size: 108.41135pt x 240.91411pt.
 
 
@@ -258,7 +277,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./figures/client/home menu.png, id=35, 1084.05pt x 2409.0pt>
 File: ./figures/client/home menu.png Graphic file (type png)
 <use ./figures/client/home menu.png>
-Package pdftex.def Info: ./figures/client/home menu.png  used on input line 385.
+Package pdftex.def Info: ./figures/client/home menu.png  used on input line 387.
 (pdftex.def)             Requested size: 108.41135pt x 240.91411pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -267,17 +286,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./figures/manager means.png, id=39, 1378.1889pt x 709.6914pt>
 File: ./figures/manager means.png Graphic file (type png)
 <use ./figures/manager means.png>
-Package pdftex.def Info: ./figures/manager means.png  used on input line 423.
+Package pdftex.def Info: ./figures/manager means.png  used on input line 425.
 (pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
 <./figures/manager means total.png, id=41, 1378.1889pt x 709.6914pt>
 File: ./figures/manager means total.png Graphic file (type png)
 <use ./figures/manager means total.png>
-Package pdftex.def Info: ./figures/manager means total.png  used on input line 440.
+Package pdftex.def Info: ./figures/manager means total.png  used on input line 442.
 (pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
 <./figures/client means.png, id=42, 1378.1889pt x 709.6914pt>
 File: ./figures/client means.png Graphic file (type png)
 <use ./figures/client means.png>
-Package pdftex.def Info: ./figures/client means.png  used on input line 461.
+Package pdftex.def Info: ./figures/client means.png  used on input line 463.
 (pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
 
 
@@ -287,10 +306,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./figures/client means total.png, id=49, 1378.1889pt x 709.6914pt>
 File: ./figures/client means total.png Graphic file (type png)
 <use ./figures/client means total.png>
-Package pdftex.def Info: ./figures/client means total.png  used on input line 480.
+Package pdftex.def Info: ./figures/client means total.png  used on input line 482.
 (pdftex.def)             Requested size: 248.0633pt x 127.73894pt.
 
-Underfull \hbox (badness 1571) in paragraph at lines 489--490
+Underfull \hbox (badness 1571) in paragraph at lines 491--492
 []\OT1/ptm/m/n/10 2) Sug-ges-tions for im-prove-ment in-cluded us-ing
  []
 
@@ -298,40 +317,40 @@ Underfull \hbox (badness 1571) in paragraph at lines 489--490
 <./figures/ltfrb/puj.jpeg, id=55, 1255.69125pt x 1929.2075pt>
 File: ./figures/ltfrb/puj.jpeg Graphic file (type jpg)
 <use ./figures/ltfrb/puj.jpeg>
-Package pdftex.def Info: ./figures/ltfrb/puj.jpeg  used on input line 510.
+Package pdftex.def Info: ./figures/ltfrb/puj.jpeg  used on input line 512.
 (pdftex.def)             Requested size: 175.79558pt x 270.0872pt.
 <./figures/ltfrb/mpuj.jpeg, id=56, 1308.89pt x 1982.40625pt>
 File: ./figures/ltfrb/mpuj.jpeg Graphic file (type jpg)
 <use ./figures/ltfrb/mpuj.jpeg>
-Package pdftex.def Info: ./figures/ltfrb/mpuj.jpeg  used on input line 517.
+Package pdftex.def Info: ./figures/ltfrb/mpuj.jpeg  used on input line 519.
 (pdftex.def)             Requested size: 183.24335pt x 277.53499pt.
 <./figures/ltfrb/pub.jpeg, id=57, 1286.8075pt x 1974.37625pt>
 File: ./figures/ltfrb/pub.jpeg Graphic file (type jpg)
 <use ./figures/ltfrb/pub.jpeg>
-Package pdftex.def Info: ./figures/ltfrb/pub.jpeg  used on input line 526.
+Package pdftex.def Info: ./figures/ltfrb/pub.jpeg  used on input line 528.
 (pdftex.def)             Requested size: 180.15182pt x 276.4108pt.
 <./figures/ltfrb/pub ordinary.jpeg, id=58, 1206.5075pt x 1818.795pt>
 File: ./figures/ltfrb/pub ordinary.jpeg Graphic file (type jpg)
 <use ./figures/ltfrb/pub ordinary.jpeg>
-Package pdftex.def Info: ./figures/ltfrb/pub ordinary.jpeg  used on input line 533.
+Package pdftex.def Info: ./figures/ltfrb/pub ordinary.jpeg  used on input line 535.
 (pdftex.def)             Requested size: 168.9099pt x 254.62956pt.
  (./atienza-sp-ieee.bbl [9 <./figures/ltfrb/puj.jpeg> <./figures/ltfrb/mpuj.jpeg> <./figures/ltfrb/pub.jpeg> <./figures/ltfrb/pub ordinary.jpeg>])
 <./figures/sablay pic.jpg, id=62, 4221.7725pt x 5277.7175pt>
 File: ./figures/sablay pic.jpg Graphic file (type jpg)
 <use ./figures/sablay pic.jpg>
-Package pdftex.def Info: ./figures/sablay pic.jpg  used on input line 552.
+Package pdftex.def Info: ./figures/sablay pic.jpg  used on input line 554.
 (pdftex.def)             Requested size: 76.01439pt x 95.02702pt.
 
-Overfull \hbox (3.7444pt too wide) in paragraph at lines 552--552
+Overfull \hbox (3.7444pt too wide) in paragraph at lines 554--554
  [][] 
  []
 
 File: ./figures/sablay pic.jpg Graphic file (type jpg)
 <use ./figures/sablay pic.jpg>
-Package pdftex.def Info: ./figures/sablay pic.jpg  used on input line 552.
+Package pdftex.def Info: ./figures/sablay pic.jpg  used on input line 554.
 (pdftex.def)             Requested size: 76.01439pt x 95.02702pt.
 
-Overfull \hbox (3.7444pt too wide) in paragraph at lines 552--552
+Overfull \hbox (3.7444pt too wide) in paragraph at lines 554--554
  [][] 
  []
 
@@ -350,7 +369,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,11n,65p,700b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on atienza-sp-ieee.pdf (10 pages, 15209760 bytes).
+Output written on atienza-sp-ieee.pdf (10 pages, 15209744 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
