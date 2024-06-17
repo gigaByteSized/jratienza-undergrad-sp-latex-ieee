@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex atienza-sp-ieee"] 1718253502.43696 "atienza-sp-ieee.aux" "atienza-sp-ieee.bbl" "atienza-sp-ieee" 1718253541.13355 0
+["bibtex atienza-sp-ieee"] 1718605737.94995 "atienza-sp-ieee.aux" "atienza-sp-ieee.bbl" "atienza-sp-ieee" 1718605954.49326 0
   "./IEEE/IEEEtran.bst" 1715768826.0936 56877 4c81423924dc505d67d7e5fcc3311d54 ""
-  "./atienza-sp-ieee.bib" 1715768826.09693 32490 bd59b37cffa68db0b1a67154bd2fe0e3 ""
-  "atienza-sp-ieee.aux" 1718253540.76396 5725 376bca70cba66db2b42f9ee8f9db01c3 "pdflatex"
+  "./atienza-sp-ieee.bib" 1718585741.55193 32777 7baaae9f9830a3a1e13042d902d27e17 ""
+  "atienza-sp-ieee.aux" 1718605954.20732 8140 1eadbfec88ead10478dff69892cb440f "pdflatex"
   (generated)
   "atienza-sp-ieee.bbl"
   "atienza-sp-ieee.blg"
   (rewritten before read)
-["pdflatex"] 1718253539.85653 "atienza-sp-ieee.tex" "atienza-sp-ieee.pdf" "atienza-sp-ieee" 1718253541.1337 0
+["pdflatex"] 1718605952.65241 "atienza-sp-ieee.tex" "atienza-sp-ieee.pdf" "atienza-sp-ieee" 1718605954.49343 0
   "/opt/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1711994471 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1711994471 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1711994471 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -57,14 +57,30 @@
   "/opt/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1711994471 8223189 189ea382e38703e0d9924814a204af86 ""
   "/opt/texlive/2024/texmf.cnf" 1711994471 585 d89e4959d6ce47100a8277b236c781f4 ""
   "IEEE/IEEEtran.cls" 1715768826.0936 196554 3cabd11adeac29567194b82095c92685 ""
-  "atienza-sp-ieee.aux" 1718253540.76396 5725 376bca70cba66db2b42f9ee8f9db01c3 "pdflatex"
-  "atienza-sp-ieee.bbl" 1718253502.58946 3721 d4465b510fc8ad51dacb7f80aa87439f "bibtex atienza-sp-ieee"
-  "atienza-sp-ieee.tex" 1718253539.55059 34600 658a45360b0dd3c1a2e20fe614fffdee ""
+  "atienza-sp-ieee.aux" 1718605954.20732 8140 1eadbfec88ead10478dff69892cb440f "pdflatex"
+  "atienza-sp-ieee.bbl" 1718605738.0452 3963 5334ae805351517320917978c6ac2ab3 "bibtex atienza-sp-ieee"
+  "atienza-sp-ieee.tex" 1718605952.10044 42786 c2d9ed07e20439c63af3f8b2333367cd ""
   "figures/client means total.png" 1718252158.2988 48304 f01bd426b1a42fa3e6b275ce872b4e71 ""
   "figures/client means.png" 1718252143.04156 62462 6215f95883e5b680c18f3e6650159333 ""
+  "figures/client/add alert.png" 1718588540 74088 93ca7e244d10aa7be8ff0119b9af66ce ""
+  "figures/client/home menu.png" 1718588513 147285 c856fc0490607535393842bb8e7f6d41 ""
+  "figures/client/multiple route.png" 1718588533 984355 054479437894e58cb05f20deef88a972 ""
+  "figures/client/welcome.png" 1718588502 1150757 f9e75eb518f57964af64134c3112b6d6 ""
+  "figures/ltfrb/mpuj.jpeg" 1718601135.70829 287491 2dca48e3e7d7e334a98026e1d32aefde ""
+  "figures/ltfrb/pub ordinary.jpeg" 1718601122.19126 394089 ab2719be876900552ee5879f004ecf11 ""
+  "figures/ltfrb/pub.jpeg" 1718601099.21063 455016 841d2415cb725bc0939b8167e90054c3 ""
+  "figures/ltfrb/puj.jpeg" 1718601130.8915 253215 e4564ab489f4f8d534d53ec033eb5528 ""
   "figures/manager means total.png" 1718252188.30658 44932 fcf369395aa30fe10ab1184082d68e33 ""
   "figures/manager means.png" 1718252170.56926 54242 89bf19800034e6f85b7afefae66bd3a8 ""
-  "yourPicture.eps" 1715768826.14027 21238 3834dbb2a4b57ff7447ac5afa9dd78fa ""
+  "figures/manager/alerts.jpeg" 1718589160.02639 99114 53c04b2c3d145b0a920ae517d19f1c97 ""
+  "figures/manager/dashboard.jpeg" 1718589095.7264 87916 a7e8acfdf53410cbbe305979c8b71b58 ""
+  "figures/manager/route request.jpeg" 1718589166.17005 92831 3ae8ade79472464c4ef6e2e68788a453 ""
+  "figures/manager/trip wizard 1.jpeg" 1718589176.58726 97239 f9eb605f042b0170a87d5fbced760fd3 ""
+  "figures/manager/trip wizard 2.jpeg" 1718589185.51773 243756 bf38eeb71b244cd6c2b357c3733b245e ""
+  "figures/manager/trip wizard 3.jpeg" 1718589191.44805 181946 f7f39c5f2d6ac4a22e4f1384bb04af73 ""
+  "figures/manager/trip wizard 4.jpeg" 1718589197.40832 185596 2b2c1b2878b636fa733446148068f66c ""
+  "figures/manager/view trip.jpeg" 1718589223.46118 194021 7fa932b958c69fb89f84fdfe95f1e777 ""
+  "figures/sablay pic.JPG" 1718603095.5656 9334211 e66495dda5a298bbe07e967ce97342b8 ""
   (generated)
   "atienza-sp-ieee.aux"
   "atienza-sp-ieee.log"

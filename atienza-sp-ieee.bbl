@@ -52,6 +52,9 @@ C.~Narboneta and K.~M. Teknomo, ``Implementation of multimodal public transporta
 A.~Comandao, W.~Santos, L.~Velasco, J.~Romano, and R.~Macatangga, ``E-jeep nn: An android e-jeep guide app with gps and open trip planner api for the new normal,'' \emph{Innovatus}, vol.~4, pp. 1--5, 2021. [Online]. Available: \url{https://doi.org/10.5281/zenodo.4646682}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Antrim01}
+A.~Antrim and S.~J. Barbeau, ``The many uses of gtfs data---opening the door to transit and multimodal applications,'' \emph{Location-Aware Information Systems Laboratory at the University of South Florida}, vol.~4, 2013.
+
 \bibitem{Lund01}
 A.~M. Lund, ``Measuring usability with the use questionnaire12,'' \emph{Usability interface}, vol.~8, no.~2, pp. 3--6, 2001.
 

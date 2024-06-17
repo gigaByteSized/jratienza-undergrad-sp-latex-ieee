@@ -1,7 +1,7 @@
 \documentclass[journal]{./IEEE/IEEEtran}
 \usepackage{cite,graphicx}
 
-\newcommand{\SPTITLE}{PARA!: A Multimodal Trip Planning Travel Companion and Public Transit information System}
+\newcommand{\SPTITLE}{PARA!: A Multimodal Trip Planning Travel Companion and Public Transit Information System}
 \newcommand{\ADVISEE}{Jonas R. Atienza}
 \newcommand{\ADVISER}{Concepcion L. Khan}
 
@@ -129,6 +129,26 @@ The application has long been updated to accomodate P2P, UV Express, and Pasig R
 A study conducted by Comandao and her colleagues~\cite{Comandao21} in their paper titled `E-Jeep NN\@: An Android E-Jeep Guide App with GPS and Open Trip Planner API for the New Normal' had promising results in terms of usability and acceptance of their application.
 However, it seems that their application, `E-Jeep NN' is not available for public use.
 
+The General Transit Feed Specification (GTFS) has become the most widely used format for representing scheduled public transportation data worldwide.
+Originally created by Google and TriMet in 2005 as a way to integrate transit data into Google Maps, GTFS has enabled the development of numerous third-party transit applications \cite{Antrim01}.
+
+GTFS represents fixed-route transit schedules, routes, and stop data in a series of comma-delimited text files.
+A GTFS dataset includes files such as agency.txt (transit agency information), routes.txt (transit routes), trips.txt (trips for each route), stop\_times.txt (stop times for each trip), calendar.txt (service schedules), and stops.txt (individual stop information) \cite{Antrim01}.
+These files are required and are the ones utilized the most by GTFS-consuming applications. The GTFS spec is continiously being maintained which made it possible to support other trip media such as fares and accessibility options.
+
+Many transit agencies have realized the benefits of openly sharing their GTFS data, which has led to a proliferation of GTFS-based applications.
+As of 2013, there were over 500 known consumer-facing GTFS-based applications, including trip planners, timetable creation tools, data visualization, accessibility tools for the disabled, transit network analysis and planning tools, and real-time transit information systems that combine GTFS with real-time arrival data \cite{Antrim01}.
+The list below highlights some examples of GTFS-powered applications:
+
+\begin{itemize}
+    \item Google Maps transit directions
+    \item OpenTripPlanner, an open-source multimodal trip planner
+    \item Tiramisu, a crowd-sourced real-time transit information app for Pittsburg
+\end{itemize} \hfill \
+
+The wide availability of GTFS data from hundreds of agencies worldwide, and the diversity of applications enabled by this data format, demonstrates the importance of open transit data standards.
+GTFS has allowed agencies to unlock the potential of their transit data to power innovative third-party applications and tools with very little additional cost or effort required from each respective public transit agencies. 
+
 % MATERIALS AND METHODS
 \section{Materials and Methods}
 This chapter covers the tools utilized for application development, the incorporation of features, and the assessment of the application's implementation.
@@ -229,8 +249,6 @@ The following tools were used in developing the application:
     \item[\textbf{OpenTripPlanner (OTP):}] \hfill \\
         An open-source multi-modal trip planner that was used to serve the GTFS data consumed by the client-facing application.
 
-    \newpage
-
     \item[\textbf{Open Route Service (ORS):}] \hfill \\
         An open-source API that provides global spatial services by consuming geographic data from OpenStreetMap (OSM) which augmented the trip creation process in the management application.
 
@@ -243,6 +261,88 @@ The following tools were used in developing the application:
 \subsection{Feature set}
 The application is composed of a client-facing application and a management application. \hfill \\
 
+\subsubsection{\textbf{Management application}}
+
+\begin{description}
+%    \item[\textbf{Login:}] \hfill \\
+%        Administrators are required to login using a provided account.
+    \item[\textbf{System metrics:}] \hfill \\
+        Administrators were able check if the OTP instance served in the GCP compute engine was running or not through OTP's Actuator API. They were also able to observe the GTFS database metrics in the dashboard.
+    
+    \item[\textbf{Export GTFS:}] \hfill \\
+        Administrators were able to export the GTFS data stored in the database into a zip file that conformed to the GTFS standard. Figure 1 below shows the dashboard of the management application, highlighting the system metrics and GTFS export features.
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/dashboard.jpeg}
+    \caption{PARA! Manager dashboard}
+\end{figure}
+
+\item[\textbf{View trips:}] \hfill \\
+        Administrators were able to visualize the GTFS data being used by the application. Figure 2 below shows the GTFS data for agency.txt, calendar.txt, frequencies.txt, routes.txt, stops.txt, stop\_times.txt, and trips.txt being consumed and visualized in a modal. 
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/view trip.jpeg}
+    \caption{PARA! Manager trip viewer}
+\end{figure}
+
+    \item[\textbf{Interactive GTFS database editor:}] \hfill \\
+        Administrators were able to Create, Read, Update, and Delete (CRUD) data to and from the GTFS database that was being consumed by the client-facing application.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/trip wizard 1.jpeg}
+    \caption{PARA! Manager trip wizard (general route information)}
+\end{figure}
+
+Figure 3 shows the screen where managers would add general information about the trip.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/trip wizard 2.jpeg}
+    \caption{PARA! Manager trip wizard (trip plotter)}
+\end{figure}
+
+Figure 4 shows the screen where managers would plot a trip's stops and its shape.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/trip wizard 3.jpeg}
+    \caption{PARA! Manager trip wizard (stop times fine tuner)}
+\end{figure}
+
+Figure 5 shows the screen where managers would either manually or automatically edit the durations in each segment of the trip. 
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/trip wizard 4.jpeg}
+    \caption{PARA! Manager trip wizard (review and save route)}
+\end{figure}
+
+Figure 6 shows the screen where managers would review the trip details and its shape before adding it into the database. \hfill \\
+
+    \item[\textbf{View and delete requests:}] \hfill \\
+       Administrators were able to view and delete requests made by clients. These requests can be a basis for the creation of new routes or modification of routes in the database.
+Figure 7 below shows the screen where managers could view and delete user-submitted route requests.
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/route request.jpeg}
+    \caption{PARA! Manager route requests}
+\end{figure}
+    
+    \item[\textbf{Moderate alerts:}] \hfill \\
+       Administrators were able to create, modify, and take down community alerts.
+       Figure 8 below shows the screen where managers could add, view, edit, and delete community alerts.
+\end{description}
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.115]{./figures/manager/alerts.jpeg}
+    \caption{PARA! Manager trip wizard (review and save route)}
+\end{figure}
+
 \subsubsection{\textbf{Client-facing application}}
 
 \begin{description}
@@ -251,38 +351,43 @@ The application is composed of a client-facing application and a management appl
 
     \item[\textbf{Generate multiple routes:}] \hfill \\
         Multiple routes are generated given an origin and destination. Appropriate fare pricing based on LTFRB's specification, along with per-leg and overall trip duration, will also be displayed.
+Figure 9 on the next page shows the screen where multiple routes are generated given an input of an origin and destination.
+The overall duration and fare is displayed on the top-left section of the DraggableScrollableSheet Widget while the duration and fare for each leg are displayed on the rightmost part of each itinerary leg entry (see Appendices I-IV for the fare computation formulae and sample fare matrices (as of October 8, 2023) provided by LTFRB RO-4A).
+Each route is color-coded through a custom random color generator function. In the figure, there are only two colors, teal and dandelion, which could be subtly seen due to the overlap in the route.
+The figure also shows a red "warning" icon which when tapped, shows details of a user- or manager-generated community alert.
 
-    \item[\textbf{Generate public alerts*:}] \hfill \\
+\newpage
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[scale=0.1]{./figures/client/multiple route.png}
+    \caption{PARA! Client (generated multiple routes)}
+\end{figure}
+
+    \item[\textbf{Generate public alerts:}] \hfill \\
         Clients generated public alerts, such as vehicular accidents, to alert commuters. Users were also able to set an expiry date (maximum of 30 days) which set the Time To Live (TTL) of the alert in the database for automatic cleanup.
+        Figure 10 below shows the add community alert function which could be accessed through the "plus" icon in the bottom nav bar (Figure 11) or through the floating action button within the community alerts screen, which could be accessed through the Home Menu (Figure 12).
 
-   % \item[\textbf{Add Routes*:}] \hfill \\
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.1]{./figures/client/add alert.png}
+    \caption{PARA! Client add community alert}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.1]{./figures/client/welcome.png}
+    \caption{PARA! Client initial screen}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.1]{./figures/client/home menu.png}
+    \caption{PARA! Client home menu}
+\end{figure}
+
+% \item[\textbf{Add Routes*:}] \hfill \\
    %     Registered clients can add routes or request changes in a particular route. A prompt asking for GTFS-ready information will be used.
-\end{description}
-
-\subsubsection{\textbf{Management application}}
-
-\begin{description}
-%    \item[\textbf{Login:}] \hfill \\
-%        Administrators are required to login using a provided account.
-    \item[\textbf{System metrics:}] \hfill \\
-        Administrators were able check if the OTP instance served in the GCP compute engine was running or not through OTP's Actuator API. They were also able to observe the GTFS database metrics in the dashboard.
-
-    \item[\textbf{View trips:}] \hfill \\
-        Administrators were able to visualize the GTFS data being used by the application.
-
-    \item[\textbf{Interactive GTFS database editor:}] \hfill \\
-        Administrators were able to Create, Read, Update, and Delete (CRUD) data to and from the GTFS database that was being consumed by the client-facing application.
-
-
-    \item[\textbf{Export GTFS:}] \hfill \\
-        Administrators were able to export the GTFS data stored in the database into a zip file that conformed to the GTFS standard. 
-
-
-    \item[\textbf{View and delete requests:}] \hfill \\
-       Administrators were able to view and delete requests made by clients. These requests can be a basis for the creation of new routes or modification of routes in the database.
-    
-    \item[\textbf{Moderate alerts:}] \hfill \\
-       Administrators were able to create, modify, and take down community alerts.
 \end{description}
 
 \subsection{User Evaluation}
@@ -303,13 +408,13 @@ The usability and user experience aspect were measured using the Usefulness, Sat
 A total of 21 individuals participated in the client-facing app evaluation while there was only a single certified tester for the management application. The interpretation for the 7-point Likert scale is the following:
 
 \begin{description}
-    \item 1 - Strongly disagree
-    \item 2 - Disagree
-    \item 3 - Somewhat disagree
-    \item 4 - Neutral
-    \item 5 - Somewhat agree
-    \item 6 - Agree
-    \item 7 -- Strongly agree.
+    \item 1 --- Strongly disagree
+    \item 2 --- Disagree
+    \item 3 --- Somewhat disagree
+    \item 4 --- Neutral
+    \item 5 --- Somewhat agree
+    \item 6 --- Agree
+    \item 7 --- Strongly agree.
 \end{description}
 
 \subsection{Management application}
@@ -319,17 +424,17 @@ A total of 21 individuals participated in the client-facing app evaluation while
     \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Manager}
 \end{figure}
 \subsubsection{Usefulness}
-Figure 1 shows the scores for each of the questions on the usefulness scale.
+Figure 13 shows the scores for each of the questions on the usefulness scale.
 ”It helps me be more effective” got 6.00, ”It helps me be more productive” got 6.00, ”It is useful” got 7.00, ”It gives me more control over the activities in my life” got 6.00, ”It makes the things I want to accomplish easier to get done” got 6.00, ”It saves me time when I use it” got 6.00, ”It meets my needs” got 6.00, ”It does everything I would expect it to do” got 6.00.
 All the questions under usefulness got a score between 6 (agree) and 7 (strongly agree) with 6 being more dominant.
 \subsubsection{Ease of Use}
-Figure 1 shows the scores for each of the questions on the ease of use scale. ”It is easy to use” got 5.00, ”It is simple to use” got 5.00, ”It is user friendly” got 6.00, ”It is flexible” got 7.00, ”It requires the fewest steps possible to accomplish what I want to do with it” got 4.00, ”Using it is effortless” got 4.00, ”I can use it without written instructions” got 3.00, ”I don’t notice any inconsistencies as I use it” got 5.00, ”Both occasional and regular users would like it” got 2.00, ”I can recover from mistakes quickly and easily” got 4.00, ”I can use it successfully every time” got 4.00.
+Figure 13 shows the scores for each of the questions on the ease of use scale. ”It is easy to use” got 5.00, ”It is simple to use” got 5.00, ”It is user friendly” got 6.00, ”It is flexible” got 7.00, ”It requires the fewest steps possible to accomplish what I want to do with it” got 4.00, ”Using it is effortless” got 4.00, ”I can use it without written instructions” got 3.00, ”I don’t notice any inconsistencies as I use it” got 5.00, ”Both occasional and regular users would like it” got 2.00, ”I can recover from mistakes quickly and easily” got 4.00, ”I can use it successfully every time” got 4.00.
 The questions under ease of use got scores between 3 (disagree) and 7 (strongly agree).
 \subsubsection{Ease of Learning}
-Figure 1 shows the scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 3.00, ”I easily remember how to use it” got 4.00, ”It is easy to learn to use it” got 3.00, ”I quickly became skillful with it” got 3.00.
+Figure 13 shows the scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 3.00, ”I easily remember how to use it” got 4.00, ”It is easy to learn to use it” got 3.00, ”I quickly became skillful with it” got 3.00.
 All of the questions under ease of learning got a score between 3 (somewhat disagree) and 4 (neutral).
 \subsubsection{Satisfaction}
-Figure 1 shows the scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 5.00, ”I would recommend it to a friend” got 6.00, ”It is fun to use” got 2.00, ”It works the way I want it to work” got 4.00, ”It is wonderful” got 4.00, ”I feel I need to have it” got 6.00, ”It is pleasant to use” got 4.00.
+Figure 13 shows the scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 5.00, ”I would recommend it to a friend” got 6.00, ”It is fun to use” got 2.00, ”It works the way I want it to work” got 4.00, ”It is wonderful” got 4.00, ”I feel I need to have it” got 6.00, ”It is pleasant to use” got 4.00.
 \begin{figure}[h]
     \centering
         \includegraphics[scale=0.18]{./figures/manager means total.png}
@@ -337,7 +442,7 @@ Figure 1 shows the scores for each of the questions on the usefulness scale. ”
 \end{figure}
 All of the questions under usefulness got a score between 6 (agree) and 7 (strongly agree).
 \subsubsection{Interpretation}
-Figure 2 shows the scores for all scales of the USE Questionnaire.
+Figure 14 shows the scores for all scales of the USE Questionnaire.
 Usefulness got 6.12, Ease of Use got 4.00, Ease of Learning got 3.25, Satisfaction got 4.29.
 The Usefulness scale got a score between 6 (agree) and 7 (strongly agree), meaning the participant overall agree to the usefulness of management application.
 The Ease of Use scale got a score of 4 (neutral), indicating that the participant are neutral in agreeing or disagreeing with the ease of use of the management application.
@@ -357,19 +462,18 @@ The Satisfaction scale got scores between 4 (neutral) and 5 (somewhat agree), in
     \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Client}
 \end{figure}
 
-
 \subsubsection{Usefulness}
-Figure 3 shows the mean scores for each of the questions on the usefulness scale.
+Figure 15 on the next page shows the mean scores for each of the questions on the usefulness scale.
 ”It helps me be more effective” got 6.24, ”It helps me be more productive” got 6.29, ”It is useful” got 6.67, ”It gives me more control over the activities in my life” got 6.10, ”It makes the things I want to accomplish easier to get done” got 6.05, ”It saves me time when I use it” got 6.00, ”It meets my needs” got 6.29, ”It does everything I would expect it to do” got 6.24.
 All the questions under usefulness got a mean score between 6 (agree) and 7 (strongly agree).
 \subsubsection{Ease of Use}
-Figure 3 shows the mean scores for each of the questions on the ease of use scale. ”It is easy to use” got 6.52, ”It is simple to use” got 6.57, ”It is user friendly” got 6.57, ”It is flexible” got 6.14, ”It requires the fewest steps possible to accomplish what I want to do with it” got 6.19, ”Using it is effortless” got 6.24, ”I can use it without written instructions” got 6.10, ”I don’t notice any inconsistencies as I use it” got 5.90, ”Both occasional and regular users would like it” got 6.24, ”I can recover from mistakes quickly and easily” got 6.24, ”I can use it successfully every time” got 6.29.
+Figure 15 shows the mean scores for each of the questions on the ease of use scale. ”It is easy to use” got 6.52, ”It is simple to use” got 6.57, ”It is user friendly” got 6.57, ”It is flexible” got 6.14, ”It requires the fewest steps possible to accomplish what I want to do with it” got 6.19, ”Using it is effortless” got 6.24, ”I can use it without written instructions” got 6.10, ”I don’t notice any inconsistencies as I use it” got 5.90, ”Both occasional and regular users would like it” got 6.24, ”I can recover from mistakes quickly and easily” got 6.24, ”I can use it successfully every time” got 6.29.
 All the questions under ease of use got a mean score between 6 (agree) and 7 (strongly agree) except for the question "I don't notice any inconsistencies as I use it" which got 5.90 but is still within the agree range.
 \subsubsection{Ease of Learning}
-Figure 3 shows the mean scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 6.33, ”I easily remember how to use it” got 6.52, ”It is easy to learn to use it” got 6.38, ”I quickly became skillful with it” got 6.38.
+Figure 15 shows the mean scores for each of the questions on the ease of learning scale. ”I learned to use it quickly” got 6.33, ”I easily remember how to use it” got 6.52, ”It is easy to learn to use it” got 6.38, ”I quickly became skillful with it” got 6.38.
 All of the questions under ease of learning got a mean score between 6 (agree) and 7 (strongly agree).
 \subsubsection{Satisfaction}
-Figure 3 shows the mean scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 6.29, ”I would recommend it to a friend” got 6.52, ”It is fun to use” got 6.28, ”It works the way I want it to work” got 6.19, ”It is wonderful” got 6.29, ”I feel I need to have it” got 6.29, ”It is pleasant to use” got 6.24.
+Figure 15 shows the mean scores for each of the questions on the usefulness scale. ”I am satisfied with it” got 6.29, ”I would recommend it to a friend” got 6.52, ”It is fun to use” got 6.28, ”It works the way I want it to work” got 6.19, ”It is wonderful” got 6.29, ”I feel I need to have it” got 6.29, ”It is pleasant to use” got 6.24.
 All of the questions under usefulness got a mean score between 6 (agree) and 7 (strongly agree).
 \begin{figure}[h]
     \centering
@@ -377,7 +481,7 @@ All of the questions under usefulness got a mean score between 6 (agree) and 7 (
     \caption{Mean Scores for Usefulness, Ease of Use, Ease of Learning, and Satisfaction (USE) of PARA! Client}
 \end{figure}
 \subsubsection{Interpretation}
-Figure 4 below shows the mean scores for all scales of the USE Questionnaire. Usefulness got 6.23, Ease of Use got 6.27, Ease of Learning got 6.40, Satisfaction got 6.30.
+Figure 16 shows the mean scores for all scales of the USE Questionnaire. Usefulness got 6.23, Ease of Use got 6.27, Ease of Learning got 6.40, Satisfaction got 6.30.
 All of the scales got a mean score between 6 (agree) and 7 (strongly agree), meaning respondents overall agree-strongly agree to the usefulness, ease of use, ease of learning, and satisfaction of PARA!.
 \subsubsection{Key Qualitative Assessment Points}
 \begin{description}
@@ -394,27 +498,60 @@ Future work should focus on refining the management application interface to mak
 
 Additionally, the expansion of this system calls for contributions to OpenTripPlanner and other mapping technologies that have OpenStreetMap at its core. PARA! will be released as an open source project to inspire budding developers and serve as basis for mapping and transit applications in the context of the Philippines.
 
+
+\newpage
+
 % APPENDICES
 \appendices
 
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here...
+\section{}
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.14]{./figures/ltfrb/puj.jpeg}
+    \caption{PUJ General fare guide}
+\end{figure}
 
 \section{}
-Appendix two (without title) text goes here...
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.14]{./figures/ltfrb/mpuj.jpeg}
+    \caption{MPUJ General fare guide}
+\end{figure}
+
+\newpage
+
+\section{}
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.14]{./figures/ltfrb/pub.jpeg}
+    \caption{PUB General fare guide}
+\end{figure}
+
+\section{}
+\begin{figure}[!h]
+    \centering
+        \includegraphics[scale=0.14]{./figures/ltfrb/pub ordinary.jpeg}
+    \caption{PUB (ordinary) General fare guide}
+\end{figure}
+
+
 
 % ACKNOWLEDGMENT
 \section*{Acknowledgment}
-Many thanks to...
-
+I would like to express my gratitude to my Special Problem adviser, Prof. Concepcion Khan, for her guidance. \hfill \\
+Many thanks also to the open source communities of OpenStreetMap, Leaflet, OpenTripplanner, and Flutter Map, who answered my queries when no documentation could. \hfill \\
+My utmost gratitude to my family who have been by my side from the beginning, providing me with the encouragement and support I needed to persevere. \hfill \\
+To Angkol Junnie, one of the first comsci people who helped me have a smooth transition since my transfer from CAFS to CAS, I am thankful for everything that I learned from you. \hfill \\
+To my loving girlfriend, Aliyah, you have my deepest love and appreciation for bringing out the best in me and inspiring me to develop this system. Without you, I could not have seen the things that mattered and because of you, I was able to really push myself to the limits more than I could have ever imagined.
 % BIBLIOGRAPHY
 \bibliographystyle{./IEEE/IEEEtran}
 \bibliography{./atienza-sp-ieee}
 % \nocite{*}
 
 % BIOGRAPHY
-\begin{biography}[{\includegraphics{./yourPicture.eps}}]{Jonas R. Atienza}
-Text here\ldots
+\begin{biography}[{\includegraphics[scale=0.018]{./figures/sablay pic.jpg}}]{Jonas R. Atienza}
+    is a Computer Science student from the University of the Philippines Los Baños. He is from Batangas City, Batangas. His research interests are cybersecurity, operating systems, geographic information systems (GIS), computer networks, and artificial intelligence (AI).
+He highly believes in the power of Free Open Source Software (FOSS) and is very interested in contributing and developing technologies for the benefit of the people.
 \end{biography}
 
 

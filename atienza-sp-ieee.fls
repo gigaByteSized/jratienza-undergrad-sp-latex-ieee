@@ -118,6 +118,66 @@ INPUT /opt/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf
 INPUT /opt/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
 INPUT /opt/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /opt/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT ./figures/manager/dashboard.jpeg
+INPUT ./figures/manager/dashboard.jpeg
+INPUT ./figures/manager/dashboard.jpeg
+INPUT ./figures/manager/dashboard.jpeg
+INPUT ./figures/manager/dashboard.jpeg
+INPUT ./figures/manager/view trip.jpeg
+INPUT ./figures/manager/view trip.jpeg
+INPUT ./figures/manager/view trip.jpeg
+INPUT ./figures/manager/view trip.jpeg
+INPUT ./figures/manager/view trip.jpeg
+INPUT ./figures/manager/trip wizard 1.jpeg
+INPUT ./figures/manager/trip wizard 1.jpeg
+INPUT ./figures/manager/trip wizard 1.jpeg
+INPUT ./figures/manager/trip wizard 1.jpeg
+INPUT ./figures/manager/trip wizard 1.jpeg
+INPUT ./figures/manager/trip wizard 2.jpeg
+INPUT ./figures/manager/trip wizard 2.jpeg
+INPUT ./figures/manager/trip wizard 2.jpeg
+INPUT ./figures/manager/trip wizard 2.jpeg
+INPUT ./figures/manager/trip wizard 2.jpeg
+INPUT ./figures/manager/trip wizard 3.jpeg
+INPUT ./figures/manager/trip wizard 3.jpeg
+INPUT ./figures/manager/trip wizard 3.jpeg
+INPUT ./figures/manager/trip wizard 3.jpeg
+INPUT ./figures/manager/trip wizard 3.jpeg
+INPUT ./figures/manager/trip wizard 4.jpeg
+INPUT ./figures/manager/trip wizard 4.jpeg
+INPUT ./figures/manager/trip wizard 4.jpeg
+INPUT ./figures/manager/trip wizard 4.jpeg
+INPUT ./figures/manager/trip wizard 4.jpeg
+INPUT ./figures/manager/route request.jpeg
+INPUT ./figures/manager/route request.jpeg
+INPUT ./figures/manager/route request.jpeg
+INPUT ./figures/manager/route request.jpeg
+INPUT ./figures/manager/route request.jpeg
+INPUT ./figures/manager/alerts.jpeg
+INPUT ./figures/manager/alerts.jpeg
+INPUT ./figures/manager/alerts.jpeg
+INPUT ./figures/manager/alerts.jpeg
+INPUT ./figures/manager/alerts.jpeg
+INPUT ./figures/client/multiple route.png
+INPUT ./figures/client/multiple route.png
+INPUT ./figures/client/multiple route.png
+INPUT ./figures/client/multiple route.png
+INPUT ./figures/client/multiple route.png
+INPUT ./figures/client/add alert.png
+INPUT ./figures/client/add alert.png
+INPUT ./figures/client/add alert.png
+INPUT ./figures/client/add alert.png
+INPUT ./figures/client/add alert.png
+INPUT ./figures/client/welcome.png
+INPUT ./figures/client/welcome.png
+INPUT ./figures/client/welcome.png
+INPUT ./figures/client/welcome.png
+INPUT ./figures/client/welcome.png
+INPUT ./figures/client/home menu.png
+INPUT ./figures/client/home menu.png
+INPUT ./figures/client/home menu.png
+INPUT ./figures/client/home menu.png
+INPUT ./figures/client/home menu.png
 INPUT ./figures/manager means.png
 INPUT ./figures/manager means.png
 INPUT ./figures/manager means.png
@@ -138,30 +198,38 @@ INPUT ./figures/client means total.png
 INPUT ./figures/client means total.png
 INPUT ./figures/client means total.png
 INPUT ./figures/client means total.png
+INPUT ./figures/ltfrb/puj.jpeg
+INPUT ./figures/ltfrb/puj.jpeg
+INPUT ./figures/ltfrb/puj.jpeg
+INPUT ./figures/ltfrb/puj.jpeg
+INPUT ./figures/ltfrb/puj.jpeg
+INPUT ./figures/ltfrb/mpuj.jpeg
+INPUT ./figures/ltfrb/mpuj.jpeg
+INPUT ./figures/ltfrb/mpuj.jpeg
+INPUT ./figures/ltfrb/mpuj.jpeg
+INPUT ./figures/ltfrb/mpuj.jpeg
+INPUT ./figures/ltfrb/pub.jpeg
+INPUT ./figures/ltfrb/pub.jpeg
+INPUT ./figures/ltfrb/pub.jpeg
+INPUT ./figures/ltfrb/pub.jpeg
+INPUT ./figures/ltfrb/pub.jpeg
+INPUT ./figures/ltfrb/pub ordinary.jpeg
+INPUT ./figures/ltfrb/pub ordinary.jpeg
+INPUT ./figures/ltfrb/pub ordinary.jpeg
+INPUT ./figures/ltfrb/pub ordinary.jpeg
+INPUT ./figures/ltfrb/pub ordinary.jpeg
 INPUT ./atienza-sp-ieee.bbl
 INPUT ./atienza-sp-ieee.bbl
 INPUT atienza-sp-ieee.bbl
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture.eps
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture.eps
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture.eps
-INPUT ./yourPicture-eps-converted-to.pdf
-INPUT ./yourPicture-eps-converted-to.pdf
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
+INPUT ./figures/sablay pic.JPG
 INPUT /opt/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /opt/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /opt/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
